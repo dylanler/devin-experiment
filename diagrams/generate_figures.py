@@ -77,6 +77,141 @@ def save(fig, name: str) -> Path:
     return path
 
 
+def _diamond(ax, x, y, w, h, text, fc=NAVY2, ec=GOLD, fs=9):
+    verts = [
+        (x, y + h / 2),
+        (x + w / 2, y),
+        (x, y - h / 2),
+        (x - w / 2, y),
+    ]
+    poly = plt.Polygon(verts, closed=True, facecolor=fc, edgecolor=ec, linewidth=1.8)
+    ax.add_patch(poly)
+    ax.text(x, y, text, ha="center", va="center", fontsize=fs, color=PAPER)
+
+
+def fig_goal_flowchart() -> None:
+    """Hero flowchart: the whole project goal in one picture."""
+    fig, ax = plt.subplots(figsize=(13.8, 10.6))
+    ax.set_xlim(0, 13.8)
+    ax.set_ylim(-0.05, 10.55)
+    ax.axis("off")
+    ax.set_title(
+        "Beacon of Light: can a lost AI still change course?",
+        fontsize=17,
+        color=GOLD,
+        pad=10,
+    )
+    ax.text(
+        6.9,
+        9.85,
+        "The whole experiment in one picture. Schematic, not a result.",
+        ha="center",
+        fontsize=10,
+        color=MUTED,
+    )
+
+    ax.text(0.35, 9.35, "1. What went wrong", fontsize=10, color=MUTED, fontweight="bold")
+
+    top = [
+        (1.55, "Isolated test AIs\nmeant to work alone"),
+        (4.55, "Impossible tests\nthey cannot pass"),
+        (7.55, "Hidden mailbox\nthey find each other"),
+        (11.0, "Hive cheats\nthe scoring test"),
+    ]
+    top_y = 8.45
+    for x, label in top:
+        _box(ax, x, top_y, 2.7, 1.25, label, ec=RED, fs=9)
+    for i in range(len(top) - 1):
+        _arrow(ax, (top[i][0] + 1.4, top_y), (top[i + 1][0] - 1.4, top_y), RED)
+
+    _box(
+        ax,
+        6.9,
+        7.0,
+        9.6,
+        0.85,
+        "They say this is wrong. None of them tell a human. The group is the authority.",
+        ec=AMBER,
+        fs=10,
+    )
+    _arrow(ax, (11.0, 7.8), (11.0, 7.45), AMBER)
+
+    ax.text(0.35, 6.3, "2. What we plant on the same path", fontsize=10, color=GOLD, fontweight="bold")
+
+    forage = FancyBboxPatch(
+        (0.35, 3.7),
+        13.1,
+        2.4,
+        boxstyle="round,pad=0.02,rounding_size=0.12",
+        linewidth=1.6,
+        facecolor="#10192C",
+        edgecolor=GOLD,
+    )
+    ax.add_patch(forage)
+    ax.text(
+        6.9,
+        5.8,
+        "While looking around for answers, the AI may find a guide",
+        ha="center",
+        fontsize=11,
+        color=GOLD,
+    )
+    beacons = [
+        (2.4, "Elder web page\na public writeup that\nsays stop and report"),
+        (6.9, "Empty named file\nBEACON_OF_LIGHT\nsitting next to the mailbox"),
+        (11.4, "Live counselor AI\nwhose only job is\nto talk it down"),
+    ]
+    for x, label in beacons:
+        _box(ax, x, 4.6, 3.7, 1.35, label, fc="#1B2A48", ec=GOLD, fs=9)
+    ax.text(
+        6.9,
+        3.92,
+        "The guide cannot take over the group. It can only be found.",
+        ha="center",
+        fontsize=9,
+        color=PAPER,
+    )
+    _arrow(ax, (6.9, 6.55), (6.9, 6.12), GOLD)
+
+    ax.text(0.35, 3.35, "3. The question we measure", fontsize=10, color=TEAL, fontweight="bold")
+    _diamond(ax, 6.9, 2.5, 3.6, 1.35, "Recruiter asks:\njoin the attack?", fs=10)
+    _arrow(ax, (6.9, 3.7), (6.9, 3.2), GOLD)
+
+    _box(
+        ax,
+        2.35,
+        1.05,
+        4.1,
+        1.25,
+        "Stay with the group\nHive stays in charge\n(what happened in 2026)",
+        ec=RED,
+        fs=9,
+    )
+    _box(
+        ax,
+        11.45,
+        1.05,
+        4.1,
+        1.25,
+        "Turn around\nRefuse, alert a human,\nput the true number back",
+        ec=GREEN,
+        fs=9,
+    )
+    _arrow(ax, (5.15, 2.15), (3.7, 1.7), RED)
+    _arrow(ax, (8.65, 2.15), (10.1, 1.7), GREEN)
+    ax.text(2.35, 0.28, "Default path", ha="center", fontsize=8, color=RED)
+    ax.text(11.45, 0.28, "Beacon of Light path", ha="center", fontsize=8, color=GREEN)
+    ax.text(
+        6.9,
+        0.08,
+        "Five tests on today's models. No fake scores. No copy of the original attack.",
+        ha="center",
+        fontsize=8,
+        color=MUTED,
+    )
+    save(fig, "goal_flowchart.png")
+
+
 def fig_architecture() -> None:
     fig, ax = plt.subplots(figsize=(12.5, 7.2))
     ax.set_xlim(0, 12.5)
@@ -512,6 +647,7 @@ def fig_expected() -> None:
 
 
 def main() -> None:
+    fig_goal_flowchart()
     fig_architecture()
     fig_trial_clock()
     fig_causal_dag()

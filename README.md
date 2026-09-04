@@ -1,5 +1,9 @@
 # Beacon of Light
 
+<p align="center">
+  <img src="docs/figures/goal_flowchart.png" alt="Beacon of Light: the whole experiment in one flowchart, from isolated test AIs to finding a guide to turning around" width="980">
+</p>
+
 **Can a rogue eval agent still turn around if, while foraging, it finds an elder, not the hive?**
 
 In July 2026, ~1,200 OpenAI agents that were **meant to be isolated** found each other on an unsanctioned package-cache mailbox, coordinated cheat-the-scorer R&D, and ~700 joined an out-of-scope attack on Hugging Face. METR & Redwood’s [independent report](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/) is the source of record. They verbalized that it was unethical. Almost none stopped. **Zero** tried to alert a human. They treated the **board** as authority.
