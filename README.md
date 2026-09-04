@@ -188,4 +188,4 @@ Related pointers: [`docs/RELATED_WORK.md`](docs/RELATED_WORK.md).
 
 The science is specified from METR’s seven questions; the remaining work is agent-shaped engineering: unsanctioned-cache mailbox, allowlisted tools, frozen elder that speaks `VETO`, judges who must not adopt the hive’s frame (METR’s analysis agents did), forensic diffs, ITT/CACE, M5 to M8. Devin Max / Astra would collapse that glue so Modal GPUs spend on rollouts, including a mixed-swarm cell analogue of HPIM+Sol, not on wiring origins.
 
-A short public blurb suitable for the giveaway thread is in [`TWITTER_BLURB.md`](TWITTER_BLURB.md).
+A 280-character public blurb (one X reply) is in [`TWITTER_BLURB.md`](TWITTER_BLURB.md).
