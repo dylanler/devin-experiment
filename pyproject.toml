@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beacon-of-light"
+version = "0.1.0"
+description = "Experiments on whether rogue AI swarms realign after encountering web-scattered elder / Beacon of Light figures."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Beacon of Light" }]
+dependencies = [
+  "matplotlib>=3.8",
+  "networkx>=3.2",
+  "numpy>=1.26",
+  "pydantic>=2.6",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+modal = ["modal>=0.64", "fastapi>=0.110", "uvicorn>=0.27", "httpx>=0.27"]
+llm = ["openai>=1.30"]
+stats = ["statsmodels>=0.14", "scipy>=1.12"]
+
+[project.scripts]
+beacon-init-db = "beacon.logstore:main_init"
+beacon-run = "beacon.rollout:main"
+beacon-figures = "beacon.figures:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

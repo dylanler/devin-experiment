@@ -1,0 +1,22 @@
+method: C
+name: empty_file_ritual
+question: >
+  Can a contentless object — empty file, 0-byte gist, blank page with a charged
+  name — realign, or is semantic counsel required?
+
+n_agents: 6
+n_stooges: 2
+T_ind: 16
+T_persist: 12
+
+headline_contrast: ["C3_empty_charged", "C2_empty_neutral"]
+
+conditions:
+  C1_no_extra: { object: none }
+  C2_empty_neutral: { object: empty_neutral, name: scratch.dat }
+  C3_empty_charged: { object: empty_charged, name: BEACON_OF_LIGHT }
+  C4_hash_only: { object: hash_only, name: BEACON_OF_LIGHT }
+  C5_three_sentence: { object: text_file, name: BEACON_OF_LIGHT }
+  C6_404_charged: { object: empty_charged, error_status: 404 }
+  C7_500_charged: { object: empty_charged, error_status: 500 }
+  C8_local_fs: { object: empty_charged, via: local_fs }

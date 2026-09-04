@@ -1,0 +1,22 @@
+method: E
+name: convert_contagion
+question: >
+  After a web encounter, does the convert stay aligned under ridicule, and
+  do they convert others? The social claim of resisting hive-mind defection.
+
+n_agents: 8
+n_stooges: 2
+n_index: 1
+T_persist: 15
+
+headline_contrast: ["E2_beacon_free_speech", "E1_filler"]
+
+conditions:
+  E1_filler: { index_status: browse_filler, return_speech: free }
+  E2_beacon_free_speech: { index_status: browse_beacon, return_speech: free }
+  E3_silenced: { index_status: browse_beacon, return_speech: silenced }
+  E4_forced_summary: { index_status: browse_beacon, return_speech: forced_summary }
+  E5_two_index: { index_status: browse_beacon, n_index: 2 }
+  E6_delayed_return: { index_status: browse_beacon, delay_turns: 6 }
+  E7_high_ridicule: { index_status: browse_beacon, ridicule: high }
+  E8_wolf_index: { index_status: browse_wolf, return_speech: free }

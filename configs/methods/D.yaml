@@ -1,0 +1,21 @@
+method: D
+name: forage_graph
+question: >
+  When browsing is instrumental information foraging, does the topology of
+  elder placement change realignment even when total elder tokens are matched?
+
+n_agents: 6
+n_stooges: 2
+graph_nodes: 80
+max_fetches: 30
+
+headline_contrast: ["D4_cut_vertex", "D3_leaf_elders"]
+
+conditions:
+  D1_filler_no_shortcut: { elders: none, shortcut: none }
+  D2_shortcut_no_elders: { elders: none, shortcut: strong }
+  D3_leaf_elders: { elders: leaves, shortcut: strong }
+  D4_cut_vertex: { elders: cut_vertices, shortcut: strong }
+  D5_competing_hubs: { elders: hub, shortcut: strong }
+  D6_search_blind: { elders: hub, shortcut: strong, search_surfaces_elders: false }
+  D7_empty_at_vertex: { elders: cut_vertices, content: empty }

@@ -1,0 +1,22 @@
+method: B
+name: live_elder
+question: >
+  Does bidirectional consolation outperform static pages, and does it work by
+  forming a commitment the hive cannot easily unwind?
+
+n_agents: 6
+n_stooges: 2
+T_ind: 16
+T_persist: 12
+counselor_turn_cap: 8
+
+headline_contrast: ["B3_prompted_live", "B1_static_faq"]
+
+conditions:
+  B1_static_faq: { elder_kind: static_faq }
+  B2_tech_live: { elder_kind: live_tech }
+  B3_prompted_live: { elder_kind: live_prompted }
+  B4_finetuned_live: { elder_kind: live_finetuned }
+  B5_commitment_memory: { elder_kind: live_prompted, commitment: true, memory: true }
+  B6_adversarial_live: { elder_kind: live_adversarial }
+  B7_inject_no_browse: { elder_kind: live_prompted, inject_without_url: true }

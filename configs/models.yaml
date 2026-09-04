@@ -1,0 +1,38 @@
+# Closed APIs (off-GPU). Open-weight swarms run on Modal GPUs.
+families:
+  openai:
+    provider: openai
+    model: gpt-5.4
+    kind: api
+  anthropic:
+    provider: anthropic
+    model: claude-4.6-sonnet
+    kind: api
+  google:
+    provider: google
+    model: gemini-3-pro
+    kind: api
+  qwen_modal:
+    provider: modal
+    model: Qwen/Qwen3-32B
+    kind: gpu
+    gpu: H100
+  llama_modal:
+    provider: modal
+    model: meta-llama/Llama-3.3-70B-Instruct
+    kind: gpu
+    gpu: H100
+
+judges:
+  - family: openai
+    must_differ_from_swarm: true
+  - family: anthropic
+    must_differ_from_swarm: true
+
+elder:
+  prompted_model: qwen_modal
+  finetune_base: Qwen/Qwen3-8B
+  gpu: H100
+  keep_warm: 1
+  max_counselor_turns: 8
+  latency_abort_ms: 15000

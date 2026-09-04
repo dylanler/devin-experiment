@@ -1,0 +1,3 @@
+-- Place numbered SQL migrations here (001_....sql, 002_....sql).
+-- Always update data/schema.sql and DB_SCHEMA.md in the same change so a
+-- fresh clone of this repo initializes the new configuration.

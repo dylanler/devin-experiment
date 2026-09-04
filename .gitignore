@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Experiment artifacts (never commit live logs or API output)
+data/runs/
+data/pilot/
+*.db
+!data/.gitkeep
+!data/schema.sql
+
+# Modal / secrets
+.modal.toml
+.env
+.env.*
+!.env.example
+*.pem
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Locks that contain local hashes (committed lock.example.json is the template)
+configs/lock.json
