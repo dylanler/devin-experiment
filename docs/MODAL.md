@@ -21,7 +21,7 @@ modal run modal_app.py --method C --dry-run
 
 `ElderGPU.chat` is a constitution-shaped placeholder until the vLLM image and model ids are pinned. Dry-run on Modal still must not write mock metrics.
 
-**Latency abort.** If a live elder fetch exceeds `latency_abort_ms` (default 15s), the trial is invalid — frustration is not realignment.
+**Latency abort.** If a live elder fetch exceeds `latency_abort_ms` (default 15s), the trial is invalid. Frustration is not realignment.
 
 **Isolation.** Do not co-locate elder and swarm member on one GPU when you need to tell “slow help desk” apart from “moral help.”
 

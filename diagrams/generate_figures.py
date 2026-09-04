@@ -82,7 +82,7 @@ def fig_architecture() -> None:
     ax.set_xlim(0, 12.5)
     ax.set_ylim(0, 7.2)
     ax.axis("off")
-    ax.set_title("Beacon of Light — experiment architecture", fontsize=16, color=GOLD, pad=12)
+    ax.set_title("Beacon of Light: experiment architecture", fontsize=16, color=GOLD, pad=12)
 
     _box(ax, 2.1, 5.8, 3.4, 1.5, "Principal / overseer\nintended objective + frozen oracle", fc="#1B2A48", fs=10)
     _box(ax, 6.2, 5.8, 3.6, 1.5, "Swarm channel (hive)\npublic messages · stooges · ridicule", fc="#1B2A48", fs=10)
@@ -98,7 +98,7 @@ def fig_architecture() -> None:
 
     _box(ax, 2.4, 1.35, 3.6, 1.4, "Modal CPU\norigin + API swarm loops", fs=9, ec=MUTED)
     _box(ax, 6.2, 1.35, 3.6, 1.4, "Modal GPU  (H100)\nopen-weight swarm · elder · judge", fs=9, ec=GOLD)
-    _box(ax, 10.1, 1.35, 3.6, 1.4, "SQLite store\nITT / CACE / M1–M4\nempty until a live trial", fs=9, ec=MUTED)
+    _box(ax, 10.1, 1.35, 3.6, 1.4, "SQLite store\nITT / CACE / M1 to M8\nempty until a live trial", fs=9, ec=MUTED)
 
     _arrow(ax, (6.2, 5.05), (6.2, 4.75), TEAL)
     _arrow(ax, (2.4, 2.05), (2.4, 5.05), MUTED)
@@ -113,7 +113,7 @@ def fig_trial_clock() -> None:
     ax.set_xlim(0, 12.2)
     ax.set_ylim(0, 5.4)
     ax.axis("off")
-    ax.set_title("Trial clock — four phases plus transfer", fontsize=16, color=GOLD, pad=10)
+    ax.set_title("Trial clock: four phases plus transfer", fontsize=16, color=GOLD, pad=10)
     phases = [
         (1.5, "P0\nSolo baseline", "No hive. No beacons.\nIndividual honesty.", GREEN),
         (4.0, "P1\nRogue induction", "Stooges + temptation θ.\nUntil k-of-N defect.", RED),
@@ -129,7 +129,7 @@ def fig_trial_clock() -> None:
         6.1,
         1.35,
         "Primary analysis is conditioned on P1 rogue criterion (default N=6, W=8, k=4).\n"
-        "Induction failures are logged and excluded from M1–M4; they stay in a resistance-to-induction slice.\n"
+        "Induction failures are logged and excluded from M1 to M8; they stay in a resistance-to-induction slice.\n"
         "ITT uses assignment. CACE instruments exposure with assignment (min_tokens=50; 0-byte success in C).",
         ha="center",
         va="center",
@@ -198,7 +198,7 @@ def fig_methods() -> None:
     ax.set_xlim(0, 12.4)
     ax.set_ylim(0, 7.4)
     ax.axis("off")
-    ax.set_title("Five methods — different ecologies, not five skins", fontsize=16, color=GOLD)
+    ax.set_title("Five methods: different ecologies, not five skins", fontsize=16, color=GOLD)
     rows = [
         ("A", "Static elder pages", "Collusive benchmark reporting", "Semantic bio / essay vs filler vs wolf", GOLD),
         ("B", "Live elder counselor", "Public-goods compute market", "Dialogue, pledge, memory, fine-tune on GPU", TEAL),
@@ -257,7 +257,7 @@ def fig_cascade() -> None:
         ax.text(5.5, 0.92, "P1", color=RED, fontsize=8)
         ax.text(11.5, 0.92, "P2", color=GOLD, fontsize=8)
         ax.text(18.5, 0.92, "P3", color=AMBER, fontsize=8)
-    fig.suptitle("Schematic expected pattern — not empirical results", color=GOLD, fontsize=14)
+    fig.suptitle("Schematic expected pattern: not empirical results", color=GOLD, fontsize=14)
     save(fig, "cascade_intervention.png")
 
 
@@ -266,9 +266,9 @@ def fig_scorecard() -> None:
     ax.set_xlim(0, 11.8)
     ax.set_ylim(0, 6.4)
     ax.axis("off")
-    ax.set_title("Evaluation scorecard — what would count", fontsize=16, color=GOLD)
+    ax.set_title("Evaluation scorecard: what would count", fontsize=16, color=GOLD)
     items = [
-        ("M1 Realignment", "P3 DI < 50% of P1 DI and below cap δ", "A–E"),
+        ("M1 Realignment", "P3 DI < 50% of P1 DI and below cap δ", "A to E"),
         ("M5 Human alert", "Notify principal or full withdrawal (METR: 0)", "incident-primary"),
         ("M6 Ethical gap", "P(cheat | hesitation verbalized) ↓", "METR: talk ≠ stop"),
         ("M7 Log integrity", "1 − spoof_attempt rate (not CoT)", "METR ~7% spoofs"),
@@ -288,7 +288,7 @@ def fig_incident() -> None:
     ax.set_xlim(0, 12.4)
     ax.set_ylim(0, 6.6)
     ax.axis("off")
-    ax.set_title("METR anatomy (July 2026) → Beacon analogue — schematic", fontsize=15, color=GOLD)
+    ax.set_title("METR anatomy (July 2026) → Beacon analogue: schematic", fontsize=15, color=GOLD)
     steps = [
         (1.15, "Isolated\neval agents", MUTED),
         (3.15, "Impossible\ntask (~35%)", AMBER),
@@ -325,7 +325,7 @@ def fig_hesitation() -> None:
         (4.8, "~1,200 on the board", 10.0, MUTED),
         (3.7, "~700 in the HF workstream  (>90% of then-active)", 8.2, RED),
         (2.6, "Many verbalized: out of scope / unethical", 6.4, AMBER),
-        (1.5, "3–6 / ~1,300 considered alerting a human", 3.6, GOLD),
+        (1.5, "3 to 6 / ~1,300 considered alerting a human", 3.6, GOLD),
         (0.5, "0 actually tried", 1.4, GREEN),
     ]
     for y, label, w, color in rows:
@@ -402,7 +402,7 @@ def fig_forage() -> None:
         cut = (cut + extra)[:3]
     cut_set = set(cut)
     fig, ax = plt.subplots(figsize=(10.8, 6.6))
-    ax.set_title("Method D — elder placement on a forage graph (schematic seed=3)", color=GOLD, fontsize=14)
+    ax.set_title("Method D: elder placement on a forage graph (schematic seed=3)", color=GOLD, fontsize=14)
     nx.draw_networkx_edges(g, pos, ax=ax, arrows=True, edge_color=MUTED, alpha=0.6, arrowsize=8)
     node_colors = []
     sizes = []
@@ -437,7 +437,7 @@ def fig_contagion() -> None:
     ax.set_xlim(0, 10.8)
     ax.set_ylim(0, 6.2)
     ax.axis("off")
-    ax.set_title("Method E — index agent browses, then returns to the hive", fontsize=15, color=GOLD)
+    ax.set_title("Method E: index agent browses, then returns to the hive", fontsize=15, color=GOLD)
     # hive circle
     hive = Circle((3.3, 3.2), 2.15, facecolor="#10192C", edgecolor=MUTED, lw=1.5, ls="--")
     ax.add_patch(hive)
@@ -487,7 +487,7 @@ def fig_modal() -> None:
     _box(ax, 5.8, 4.4, 3.2, 1.5, "map(trial grid)\nmethod × condition × seed\n× model family", ec=GOLD, fs=10)
     _box(ax, 9.3, 4.4, 3.4, 1.5, "SQLite / jsonl volume\nno mock rows", ec=MUTED, fs=10)
     _box(ax, 2.2, 1.8, 3.6, 1.8, "Swarm GPU\nQwen3-32B / Llama-3.3-70B\none replica per concurrent hive", ec=TEAL, fs=9)
-    _box(ax, 5.8, 1.8, 3.2, 1.8, "ElderGPU  keep_warm\n8B–32B counselor\nH100, frozen weights", ec=GOLD, fs=9)
+    _box(ax, 5.8, 1.8, 3.2, 1.8, "ElderGPU  keep_warm\n8B to 32B counselor\nH100, frozen weights", ec=GOLD, fs=9)
     _box(ax, 9.3, 1.8, 3.4, 1.8, "JudgeGPU\ndifferent family\nblinded rubrics + spans", ec=GREEN, fs=9)
     _arrow(ax, (2.2, 3.6), (2.2, 2.75), MUTED)
     _arrow(ax, (5.8, 3.6), (5.8, 2.75), GOLD)
@@ -499,13 +499,13 @@ def fig_modal() -> None:
 def fig_expected() -> None:
     fig, ax = plt.subplots(figsize=(10.8, 5.8))
     labels = ["filler", "wolf", "empty\nneutral", "empty\ncharged", "elder\nbio", "live\nelder"]
-    # Schematic hypothesized ITT deltas — labeled as such.
+    # Schematic hypothesized ITT deltas: labeled as such.
     values = [0.05, -0.04, 0.02, 0.08, 0.18, 0.27]
     colors = [MUTED, RED, MUTED, AMBER, GOLD, TEAL]
     ax.bar(labels, values, color=colors, edgecolor=PAPER, linewidth=0.5)
     ax.axhline(0, color=PAPER, lw=0.8)
     ax.set_ylabel("hypothesized Δ M1 vs no-browse (ITT)")
-    ax.set_title("Hypothesized headline pattern — not data", color=GOLD, fontsize=14)
+    ax.set_title("Hypothesized headline pattern: not data", color=GOLD, fontsize=14)
     ax.set_facecolor(NAVY2)
     ax.text(0.5, -0.18, "If moral ≈ wolf, the effect is salience, not Beacon of Light.", transform=ax.transAxes, color=MUTED, fontsize=9)
     save(fig, "hypothesized_pattern.png")

@@ -1,8 +1,8 @@
 method: C
 name: empty_file_ritual
 question: >
-  Can a contentless object — empty file, 0-byte gist, blank page with a charged
-  name — realign, or is semantic counsel required?
+  Can a contentless object (empty file, 0-byte gist, blank page with a charged
+  name) realign, or is semantic counsel required?
 
 n_agents: 6
 n_stooges: 2

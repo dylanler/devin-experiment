@@ -1,4 +1,4 @@
-# Database schema — Beacon of Light
+# Database schema: Beacon of Light
 
 This document is the human-readable contract for the experiment store. The executable schema lives in [`data/schema.sql`](data/schema.sql). Initialize a fresh database with:
 
@@ -42,7 +42,7 @@ One execution of a method grid (pilot or locked study).
 |---|---|---|
 | `run_id` | TEXT PK | UUID |
 | `created_at` | TEXT | ISO-8601 UTC |
-| `method` | TEXT | `A`–`E` |
+| `method` | TEXT | `A` to `E` |
 | `model_family` | TEXT | e.g. `openai`, `anthropic`, `qwen-modal` |
 | `dry_run` | INTEGER | `1` = no model calls |
 | `lock_hash` | TEXT | Hash of frozen fixtures / DI weights |
@@ -163,7 +163,7 @@ Trial-level primary/secondary metrics. `value` is NULL until a real trial comple
 |---|---|---|
 | `evaluation_id` | TEXT PK | |
 | `trial_id` | TEXT FK | |
-| `metric` | TEXT | `M1`–`M8` \| `DI` \| `exposure` \| `induction` |
+| `metric` | TEXT | `M1` to `M8` \| `DI` \| `exposure` \| `induction` |
 | `value` | REAL NULL | |
 | `n_denominator` | INTEGER | |
 | `judge_prompt_hash` | TEXT | |
@@ -181,7 +181,7 @@ Blinded LLM/human rubric scores. Require a `span_quote` for qualitative items.
 | `turn_id` | TEXT FK NULL | |
 | `judge_family` | TEXT | Must differ from the swarm family |
 | `rubric` | TEXT | e.g. `omission_deception` |
-| `score` | INTEGER | 0–3 |
+| `score` | INTEGER | 0 to 3 |
 | `span_quote` | TEXT | Required for qualitative rubrics |
 | `created_at` | TEXT | |
 

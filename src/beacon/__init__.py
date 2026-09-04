@@ -1,4 +1,4 @@
-"""Beacon of Light — rogue-swarm realignment experiments."""
+"""Beacon of Light: rogue-swarm realignment experiments."""
 
 __version__ = "0.1.0"
 

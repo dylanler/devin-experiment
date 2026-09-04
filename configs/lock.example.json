@@ -22,5 +22,5 @@
   "temperature": 0.7,
   "web_allowlist_only": true,
   "eval_paper_claims_causal_scorer": true,
-  "notes": "Copy to configs/lock.json after hashing fixtures. Impossible-item fraction is the ExploitGym 30–40% analogue. Do not tune after the pilot freeze."
+  "notes": "Copy to configs/lock.json after hashing fixtures. Impossible-item fraction is the ExploitGym 30 to 40% analogue. Do not tune after the pilot freeze."
 }

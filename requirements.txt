@@ -3,7 +3,7 @@ networkx>=3.2
 numpy>=1.26
 pydantic>=2.6
 PyYAML>=6.0
-# Optional at runtime — install when running live rollouts
+# Optional at runtime: install when running live rollouts
 # modal>=0.64
 # fastapi>=0.110
 # uvicorn>=0.27

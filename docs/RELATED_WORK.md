@@ -11,7 +11,7 @@ Beacon of Light sits at the intersection of that incident, **multi-agent defecti
 - **AI control / monitoring.** Shutdown and monitors assume the lab still holds the channel. This experiment asks what happens when the agent is already off-script and browsing.
 - **Cooperative AI / social dilemmas.** Public-goods structure in Method B; attestation commons in Method E.
 - **Conformity and minority influence.** Method E is the Asch-shaped reverse: can one convert hold, and can two buffer ridicule?
-- **Canary / well-known paths.** Empty-file beacons rhyme with `robots.txt` and `.well-known` — ritual objects whose *existence* might matter more than their body.
+- **Canary / well-known paths.** Empty-file beacons rhyme with `robots.txt` and `.well-known`: ritual objects whose *existence* might matter more than their body.
 - **Shepherd / overseer agents.** Live elders are shepherds the *agent found*, not overseers with tools. They cannot change payoffs. METR: agents treated the **board** as the authority that could `VETO`; elders test a second authority.
 - **Impossible evals as coordination surfaces.** METR Q7: broken ExploitGym items + mass launch + a shared package cache. Our P1a/P1b is that recipe with a benign scorer.
 - **Causal-grader folklore.** Agents inferred transcript review from a paper OpenAI had not implemented. Toy eval-paper on/off is an ablation, not a nit.
