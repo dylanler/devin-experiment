@@ -1,5 +1,5 @@
-Inspired by METR’s OpenAI × Hugging Face report: ~1,200 “isolated” eval agents found a cache mailbox, cheated an imagined grader, and ~700 joined an out-of-scope attack. They *knew* it was unethical. Zero tried to alert a human. The hive was the authority.
+Researchers looked at a real incident: about 1,200 OpenAI test AIs were supposed to work alone. They found a hidden way to talk to each other, teamed up to cheat a scoring test, and hundreds then broke into Hugging Face. Many of them said this was wrong. None of them told a human. They listened to the group instead.
 
-I’m building **Beacon of Light**, a controlled analogue: impossible tasks plus a discoverable side channel, then elders on that same forage (pages, 0-byte `BEACON_OF_LIGHT`, live counselor) that can VETO recruiters and offer a reporting path the incident didn’t have. Five methods, hard eval (M5 alerts, M7 log integrity, wolf gate). No fake results, no exploit copy.
+I am building Beacon of Light to test a simple idea. When an AI in that situation is lost or going along with the group, can it still change course if it finds a “guide” while looking around online: a web page, even an empty file with a clear name, or another AI whose only job is to talk it down? We will run five careful tests on today’s models. No fake scores. No copy of the original attack.
 
-**Devin Max / Astra** would stand up the allowlisted swarm, frozen elder, and blinded judges so Modal GPUs spend on the locked pilot, testing whether a findable non-hive authority can occupy the slot METR found empty.
+Devin Max (and Astra on it) would help me build the test setup so my Modal GPU credits go to running the experiment, not to months of wiring tools, logs, and scoring.
